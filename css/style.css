@@ -1,0 +1,230 @@
+/* Reset...
+  ========================================================================== 
+  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*************************************** Fonts ******************************************/
+@font-face {
+  font-family: "Ketchum";
+  src: url(../font/Ketchum.woff);
+}
+
+/* Mise en page...
+
+   ========================================================================== */
+
+html {
+  width: 100%;
+  font-size: 87, 5%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Ketchum";
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffcb05;
+  text-shadow: 1px 2px black;
+  /* -webkit-text-stroke: 0.1px blue; */
+  cursor: default;
+
+  /*Conteneur flex*/
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  /*Item flex*/
+  flex: 0 0 auto;
+
+  /*Décoration*/
+  background-color: #ffcb05;
+  background-image: url(../gif/pokemon-template-poke-stop-test.gif);
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  -webkit-text-stroke: 0.1px blue;
+}
+
+p {
+  font-size: 2rem;
+  -webkit-text-stroke: 1px blue;
+}
+
+footer {
+  /*Conteneur flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+footer > p {
+  /*Item flex*/
+  flex: 1 1 auto;
+}
+
+footer > div {
+  /*Item flex*/
+  flex: 0 0 auto;
+
+  /*Décoration*/
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+footer > div > i:hover {
+  transform: scale(1.2);
+}
+
+section {
+  /*Étirement comme item flex*/
+  flex: 1 1 auto;
+  /*Conteneur flex en colonne*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  /*Décoration*/
+  margin: 1em;
+  background-color: #e4e4e4;
+}
+
+.question h1 {
+  font-size: 3rem;
+  width: 90%;
+
+  color: #ffcb05;
+}
+
+.question ul {
+  width: 90vw;
+  /*Étirement comme item flex*/
+  flex: 1 1 auto;
+  /*Conteneur flex en colonne*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.question ul li {
+  font-size: 2rem;
+  width: 100%;
+  height: 7.5rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  background-image: url(../img/pokeball-2.png);
+  background-size: 100%;
+  color: #ffcb05;
+  border: 2px solid #ffcb05;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  -webkit-text-stroke: 1.5px blue;
+}
+
+.question ul li:hover,
+.question ul li:active {
+  color: darkblue;
+  background-color: #ffcb05;
+  background-image: url(../img/pokeball-2_hover.png);
+
+  animation: animationhover 3s alternate;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+.fenetre {
+  /*Décoration*/
+  padding: 2%;
+  background-color: #e4e4e4;
+  color: #ffcb05;
+  -webkit-text-stroke: 2px navy;
+  font-size: 2rem;
+  background-image: url(../gif/fcac9a80651c20cfde5d41d430016ac6.gif);
+
+  background-size: 100% 100%;
+
+  border: 0.5rem solid #ffcb05;
+  border-radius: 5rem;
+
+  /*Conteneur flex en colonne*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  /*Position*/
+  position: absolute;
+}
+
+/* Styles pour les écrans plus larges...
+========================================================================== */
+
+@media screen and (min-width: 768px) {
+  /*On augmente la taille du texte*/
+  html {
+    font-size: 100%;
+  }
+
+  .question ul {
+    /*Conteneur flex en rangée*/
+    flex-direction: row;
+  }
+
+  .question ul li {
+    width: 25%;
+  }
+}
+
+/********************************* Tablette ***********************************/
+@media (min-width: 521px) and (max-width: 980px) {
+  html {
+    font-size: 70%;
+  }
+  audio {
+    display: none;
+  }
+  .question ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question ul li {
+    width: 80%;
+    margin: 1em;
+  }
+} /*========= fin de médiaquerry  ==============*/
+
+/********************************* Mobile *************************************/
+@media (max-width: 520px) {
+  html {
+    font-size: 60%;
+  }
+
+  audio {
+    display: none;
+  }
+
+  .question ul li {
+    width: 50%;
+    margin: 1em;
+  }
+} /*========= fin de médiaquerry  ==============*/

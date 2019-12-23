@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz - Étape 1</title>
+
+    <!-- Ajustement de la taille du viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Importation de la police d'icônes Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="https://use.fontawesome.com/039279f0d1.js"></script>
+
+    <!-- Importation de la feuille de style-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/animation_intro.css" />
+    <link rel="stylesheet" href="css/animation_question.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Jean-Luc.css" />
+    <link rel="stylesheet" href="css/animation_titre.css" />
+    <!-- Scripts JavaScript -->
+    <script type="module" src="./mjs/main.mjs"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="animTitre">Poké-Quiz</h1>
+      <audio controls autoplay id="musique_intro" lopp>
+        <source
+          src="audio/001 Title Screen (feat. Masaya Watana.mp3"
+          type="audio/mp3"
+        />
+        Your browser does not support the audio element.
+      </audio>
+      <!-- <iframe
+        src="audio/001 Title Screen (feat. Masaya Watana.mp3"
+        allow="autoplay"
+        style="display:none"
+        id="iframeAudio"
+      >
+      </iframe> -->
+    </header>
+
+    <div class="video_container">
+      <video autoplay loop muted>
+        <source
+          src="video/y2mate.com - pokemon_rotomdex_custom_wallpaper_loop_jpWxbo-vbT0_1080p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <section>
+      <div class="center-on-page">
+        <div class="pokeball">
+          <div class="pokeball__button"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Cliquer sur le bouton pour afficher, s'il y a lieu, la question
+        suivante...
+      </p>
+      <div><i class="fas fa-angle-right"></i></div>
+    </footer>
+  </body>
+</html>
